@@ -12,4 +12,4 @@ jobs:
     steps:
     - run: |
         set JAVA_HOME=%JAVA_HOME_11_X64%
-        echo %JAVA_HOME%
+        set JAVA_HOME
