@@ -7,9 +7,11 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
-    container: eclipse/platformreleng-centos-swt-build:gerrit
+    runs-on: windows-2016
 
     steps:
-    - run: dir
-    - run: pwd
+    - run: |
+        dir
+        git clone "https://git.eclipse.org/r/platform/eclipse.platform.swt"
+        git fetch "https://git.eclipse.org/r/platform/eclipse.platform.swt" refs/changes/50/175450/10 && git checkout -b change-175450-10 FETCH_HEAD
+        dir
