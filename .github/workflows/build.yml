@@ -1,0 +1,15 @@
+name: Build Chromium Binaries
+
+on:
+  push:
+    branches:    
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    container: eclipse/platformreleng-centos-swt-build
+
+    steps:
+    - run: dir
+    - run: pwd
