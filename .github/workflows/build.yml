@@ -1,4 +1,4 @@
-name: Build Chromium Binaries
+name: Build Chromium binaries for Windows
 
 on: release
 jobs:
