@@ -12,7 +12,7 @@ jobs:
 
     steps:
     - run: |
-        cd ~
+        cd /tmp
         pwd
         ls
         mkdir build
