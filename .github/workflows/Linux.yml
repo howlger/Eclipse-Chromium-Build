@@ -6,12 +6,25 @@ on:
       - main
 
 jobs:
-  build:
+  vm:
     runs-on: ubuntu-latest
-    container: eclipse/platformreleng-centos-swt-build:8
+    steps:
+    - run: |
+        cd /tmp
+        mkdir build
+        cd build
+        pwd
+        
+  container:
+    runs-on: ubuntu-latest
+    container:
+      image: eclipse/platformreleng-centos-swt-build:8
+      options: -v /tmp/build:/tmp/build/:rw
 
     steps:
     - run: |
+        ls /tmp
+        ls /tmp/build
         cd /tmp
         pwd
         ls
