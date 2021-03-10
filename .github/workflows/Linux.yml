@@ -12,7 +12,9 @@ jobs:
 
     steps:
     - run: |
-        cd /home
+        cd ~
+        pwd
+        ls
         mkdir build
         cd build
         git clone "https://git.eclipse.org/r/platform/eclipse.platform.swt"
