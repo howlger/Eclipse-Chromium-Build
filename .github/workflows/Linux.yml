@@ -20,6 +20,7 @@ jobs:
         ls -l
         
   container:
+    needs: vm
     runs-on: ubuntu-latest
     container:
       image: eclipse/platformreleng-centos-swt-build:8
