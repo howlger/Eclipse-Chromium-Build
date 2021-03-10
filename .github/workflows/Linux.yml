@@ -15,6 +15,7 @@ jobs:
         cd build
         echo "test" > test.txt
         pwd
+        ls
         
   container:
     runs-on: ubuntu-latest
@@ -24,12 +25,12 @@ jobs:
 
     steps:
     - run: |
-        ls /tmp/build
         cd /tmp
         pwd
         ls
-        mkdir build
         cd build
+        pwd
+        ls
         git clone "https://git.eclipse.org/r/platform/eclipse.platform.swt"
         git clone "https://git.eclipse.org/r/platform/eclipse.platform.swt.binaries"
         cd eclipse.platform.swt
