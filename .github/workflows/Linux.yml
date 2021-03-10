@@ -15,7 +15,8 @@ jobs:
         cd build
         echo "test" > test.txt
         pwd
-        ls
+        ls -l
+        chmod 555 test.txt
         
   container:
     runs-on: ubuntu-latest
