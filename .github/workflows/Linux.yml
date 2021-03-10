@@ -12,6 +12,16 @@ jobs:
 
     steps:
     - run: |
+        cd /home
+        ls
+        cd jenkins
+        ls
+        cd agent
+        ls
+        cd workspace
+        ls
+        cd gtk_linux_x86_64_pipeline_chromium
+        ls
         pwd
         mkdir build
         cd build
