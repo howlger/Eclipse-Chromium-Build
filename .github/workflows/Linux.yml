@@ -17,6 +17,7 @@ jobs:
         pwd
         ls -l
         chmod 555 test.txt
+        ls -l
         
   container:
     runs-on: ubuntu-latest
@@ -26,12 +27,8 @@ jobs:
 
     steps:
     - run: |
-        cd /tmp
-        pwd
-        ls
-        cd build
-        pwd
-        ls
+        cd /tmp/build
+        ls -l
         git clone "https://git.eclipse.org/r/platform/eclipse.platform.swt"
         git clone "https://git.eclipse.org/r/platform/eclipse.platform.swt.binaries"
         cd eclipse.platform.swt
